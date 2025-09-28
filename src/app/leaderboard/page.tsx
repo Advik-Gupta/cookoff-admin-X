@@ -124,7 +124,7 @@ function Leaderboard() {
             </h2>
             <div className="flex flex-col gap-1">
               {otherUsers.length > 0 ? (
-                otherUsers.map((user, index) => {
+                otherUsers.slice(0, 17).map((user, index) => {
                   const rank = index + 4;
                   return (
                     <div

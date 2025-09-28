@@ -12,6 +12,7 @@ import {
 } from "@/api/timer";
 import { Clock, Settings, Zap } from "lucide-react";
 import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 import { FaPlay, FaPlus, FaStopCircle } from "react-icons/fa";
 
 const ACCENT_GREEN = "#1ba94c";
@@ -31,6 +32,7 @@ function Timer() {
   const [isStarting, setIsStarting] = useState(false);
   const [timerData, setTimerData] = useState<GetTimeResponse | null>(null);
   const [remainingSeconds, setRemainingSeconds] = useState(0);
+  const [disableSetTime, setDisableSetTime] = useState(false);
   const [duration, setDuration] = useState<DurationState>({
     hours: 0,
     minutes: 0,
@@ -112,7 +114,16 @@ function Timer() {
       time: formattedTime,
     };
 
-    await setTime(payload);
+    setDisableSetTime(true);
+    await setTime(payload)
+      .then(() => {
+        toast.success(
+          `Round ${selectedRound} time set to ${formatTime(seconds)}`,
+        );
+      })
+      .catch(() => {
+        toast.error("Failed to set time. Please try again.");
+      });
   }
 
   async function handleStartRound() {
@@ -235,8 +246,13 @@ function Timer() {
             </div>
 
             <button
-              className={`ml-0 whitespace-nowrap rounded-lg sm:ml-2 bg-[${ACCENT_GREEN}] mt-3 px-4 py-2 text-center font-semibold text-white transition hover:bg-[#1ba94c]/70 hover:text-white sm:mt-0`}
               onClick={handleSetTime}
+              disabled={disableSetTime}
+              className={`ml-0 mt-3 whitespace-nowrap rounded-lg px-4 py-2 text-center font-semibold text-white transition sm:ml-2 sm:mt-0 ${
+                disableSetTime
+                  ? "cursor-not-allowed bg-gray-500"
+                  : `bg-[${ACCENT_GREEN}] hover:scale-105 hover:bg-[#15803d]`
+              }`}
             >
               Set Duration
             </button>
