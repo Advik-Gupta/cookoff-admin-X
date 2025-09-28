@@ -53,6 +53,7 @@ function Timer() {
       const diff = Math.max(0, Math.floor((end - now) / 1000));
       setRemainingSeconds(diff);
       setIsRunning(diff > 0);
+      setDisableSetTime(diff > 0);
     } else {
       setTimerData(null);
       setRemainingSeconds(0);
@@ -137,6 +138,7 @@ function Timer() {
     await resetRound();
     void fetchTimer();
     setIsStarting(false);
+    setDisableSetTime(false);
   }
 
   async function handleAddTime() {
