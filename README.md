@@ -198,8 +198,6 @@ pnpm build
 
 ## 🚀 Contributors (Alphabetical)
 
-(Alphabetical order by display name)
-
 <table>
 <tr align="center">
 
@@ -241,8 +239,6 @@ pnpm build
 
 </tr>
 </table>
-
-<!-- Add more contributor <td> blocks as needed -->
 
 ## License
 
