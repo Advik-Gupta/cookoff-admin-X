@@ -59,25 +59,39 @@
 <p align="center">
 
 #### Login Page
-<img width="1440" alt="login" src="/showcase_ss/login_page.png">
+
+<img width="1440" alt="login" src="/showcase_ss/login.jpeg">
 
 ### Portal
 
 #### Dashboard
-<img width="1440" alt="dashboard" src="/showcase_ss/dashboard_page.png">
+
+<img width="1440" alt="dashboard" src="/showcase_ss/dashboard.jpeg">
 
 #### Edit Question Page
-<img width="1440" alt="edit-question" src="/showcase_ss/edit_question_page.png">
+
+<img width="1440" alt="edit-question" src="/showcase_ss/edit_question.jpeg">
 
 #### Question Creation Page
-<img width="1440" alt="create-question" src="/showcase_ss/question_creation_page.png">
+
+<img width="1440" alt="create-question" src="/showcase_ss/create_question.jpeg">
 
 #### Question Page
-<img width="1440" alt="question" src="/showcase_ss/question_page.png">
-<img width="1440" alt="testcases" src="/showcase_ss/testcase_question_page.png">
+
+<img width="1440" alt="question" src="/showcase_ss/questions.jpeg">
+<img width="1440" alt="testcases" src="/showcase_ss/questions_2.jpeg">
 
 #### Users Page
-<img width="1440" alt="users" src="/showcase_ss/users_page.png">
+
+<img width="1440" alt="users" src="/showcase_ss/users.jpeg">
+
+#### Timer Page
+
+<img width="1440" alt="users" src="/showcase_ss/timer.jpeg">
+
+#### Leaderboard Page
+
+<img width="1440" alt="users" src="/showcase_ss/leaderboard.jpeg">
 
 </p>
 
@@ -101,12 +115,14 @@ npm install
 Environment (create `.env.local`):
 
 ```bash
-NEXT_PUBLIC_API_BASE_URL=https://api.cookoffx.codechefvit.com
-NEXT_PUBLIC_EVENT_CODE=COOKOFFX
-ADMIN_AUTH_ISSUER=https://auth.cookoffx.codechefvit.com
-ADMIN_AUTH_CLIENT_ID=XXXX
-ADMIN_AUTH_SECRET=XXXX
-NEXT_PUBLIC_ENABLE_REALTIME=false
+NEXT_PUBLIC_API_BASE_URL=
+NEXT_PUBLIC_FIREBASE_API_KEY=
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=
+NEXT_PUBLIC_FIREBASE_APP_ID=
+NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=
 ```
 
 Run:
@@ -135,10 +151,10 @@ Suggested structure:
 
 ## 📝 Checkout:
 
-- Backend (update with current year’s backend repo once available)  
-  Previous cycle example: https://github.com/CodeChefVIT/cookoff-9.0-backend
-- Participant Portal (update when ready)  
-  Previous example: https://github.com/CodeChefVIT/cookoff-portal-9.0
+- Backend
+  Previous cycle example: https://github.com/CodeChefVIT/cookoff-10.0-be
+- Participant Portal
+  Previous example: https://github.com/CodeChefVIT/cookoff-portal-10.0
 
 ## 🤝 Contribution Workflow
 
