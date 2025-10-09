@@ -37,24 +37,17 @@
   - Ban / unban
   - Bulk round promotion
 - Question Management:
-  - CRUD with rich editor / markdown preview
+  - CRUD with rich editor/markdown preview
   - Difficulty, tags, constraints metadata
 - Testcase Management:
   - List, create, update, delete
   - Distinguish sample vs hidden
-  - Bulk import (planned)
 - Round / Contest Control:
-  - Schedule management
-  - Freeze scoreboard (planned)
-- Judge / Evaluation (planned):
-  - Rejudge flow
-  - Queue monitoring
-- Observability (optional):
-  - Submission analytics
-  - Audit log
-- Performance:
-  - Query caching & background refresh
-  - Optimistic updates for UI responsiveness
+  - Control timer from admin (start rounds, add time)
+- Notifications:
+  - Send notifications to users on the main portal
+- Observability:
+  - Submission analytics page
 
 <p align="center">
 
@@ -84,6 +77,10 @@
 #### Users Page
 
 <img width="1440" alt="users" src="/showcase_ss/users.jpeg">
+
+#### User submissions Page
+
+<img width="1470" height="708" alt="image" src="https://github.com/user-attachments/assets/3f446e65-9e11-4d3a-a9d2-0a7d60891fcb" />
 
 #### Timer Page
 
